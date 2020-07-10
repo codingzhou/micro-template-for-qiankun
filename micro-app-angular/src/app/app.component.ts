@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { assetUrl } from 'src/single-spa/asset-url';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
+  imgSrc = assetUrl("Circle.jpg");
   title = 'micro-app-angular';
 
   menus = [
@@ -24,5 +26,9 @@ export class AppComponent {
   get currentRoute() {
     const menu = this.menus.find(item => item.route === window.location.pathname)
     return menu ? menu.key : "angular";
+  }
+
+  constructor() {
+    console.log('app component ts', this.imgSrc);
   }
 }

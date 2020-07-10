@@ -10,7 +10,7 @@ module.exports = (angularWebpackConfig, options) => {
       library: "AngularMicroApp",
       // 将你的 library 暴露为所有的模块定义下都可运行的方式
       libraryTarget: 'umd',
-      publicPath: `//localhost:10300`,
+      // publicPath: `//localhost:10300`,
     }
   };
   const mergedConfig = webpackMerge.smart(singleSpaWebpackConfig, singleSpaConfig);

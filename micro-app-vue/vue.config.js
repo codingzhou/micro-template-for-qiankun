@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  // publicPath: '//localhost:10200',
   devServer: {
     // 监听端口
     port: 10200,
